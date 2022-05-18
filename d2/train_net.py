@@ -157,3 +157,6 @@ if __name__ == "__main__":
         dist_url=args.dist_url,
         args=(args,),
     )
+
+
+# python ~/Scripts/detr/d2/train_net.py --config ~/Scripts/detr/d2/configs/detr_256_6_6_torchvision_custom.yaml --num-gpus 1 MODEL.WEIGHTS "/home/justin.butler1/Scripts/detr/converted_models/converted_detr_r101_model.pth" SOLVER.IMS_PER_BATCH 5 OUTPUT_DIR 'detr_testing'
