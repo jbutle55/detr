@@ -24,9 +24,21 @@ from detectron2.config import get_cfg
 from detectron2.data import MetadataCatalog, build_detection_train_loader
 from detectron2.engine import DefaultTrainer, default_argument_parser, default_setup, launch
 from detectron2.evaluation import COCOEvaluator, verify_results
-
+from detectron2.data.datasets import register_coco_instances
 from detectron2.solver.build import maybe_add_gradient_clipping
 
+register_coco_instances('uav_dataset1', {},
+                            'uav-detect/cars-only/dataset1/dataset1_x1y1wh.json',
+                            'uav-detect/cars-only/dataset1/images')
+register_coco_instances('uav_dataset2', {},
+                        'uav-detect/cars-only/dataset2/dataset2_x1y1wh.json',
+                        'uav-detect/cars-only/dataset2/images')
+register_coco_instances('uav_dataset3', {},
+                        'uav-detect/cars-only/dataset3/dataset3_x1y1wh.json',
+                        'uav-detect/cars-only/dataset3/images')
+register_coco_instances('uav_dataset4', {},
+                        'uav-detect/cars-only/dataset4/dataset4_x1y1wh.json',
+                        'uav-detect/cars-only/dataset4/images')
 
 class Trainer(DefaultTrainer):
     """
@@ -118,6 +130,8 @@ def setup(args):
 
 def main(args):
     cfg = setup(args)
+
+    print(f'cfg: {cfg}')
 
     if args.eval_only:
         model = Trainer.build_model(cfg)
