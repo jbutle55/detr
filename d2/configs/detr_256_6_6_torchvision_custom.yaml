@@ -18,8 +18,8 @@ MODEL:
   ROI_HEADS:
     NUM_CLASSES: 80
 DATASETS:
-  TRAIN: ("uav_dataset1", "uav_dataset2", "uav_dataset3")
-  TEST: ("uav_dataset4",)
+  TRAIN: ("shapes_train",)
+  TEST: ("shapes_val_no_gauss",)
 SOLVER:
   IMS_PER_BATCH: 64
   BASE_LR: 0.0001

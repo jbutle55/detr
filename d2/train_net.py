@@ -39,6 +39,13 @@ register_coco_instances('uav_dataset3', {},
 register_coco_instances('uav_dataset4', {},
                         'uav-detect/cars-only/dataset4/dataset4_x1y1wh.json',
                         'uav-detect/cars-only/dataset4/images')
+register_coco_instances('shapes_train', {},
+                        'shapes/Shapes_7500imgs_mod4/shapes.json',
+                        'shapes/Shapes_7500imgs_mod4/images')
+register_coco_instances('shapes_val_no_gauss', {},
+                        'shapes/Shapes_1500imgs/no_gauss/shapes.json',
+                        'shapes/Shapes_1500imgs/no_gauss/images')
+
 
 class Trainer(DefaultTrainer):
     """
