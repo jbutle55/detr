@@ -45,6 +45,12 @@ register_coco_instances('shapes_train', {},
 register_coco_instances('shapes_val_no_gauss', {},
                         'shapes/Shapes_1500imgs/no_gauss/shapes.json',
                         'shapes/Shapes_1500imgs/no_gauss/images')
+register_coco_instances('aerial_train_cars', {},
+                            'aerial-cars/cars-only/labels/train_valid.json',
+                            'aerial-cars/cars-only/images/train')
+register_coco_instances('aerial_valid_cars', {},
+                        'aerial-cars/cars-only/labels/aerial_valid.json',
+                        'aerial-cars/cars-only/images/valid')
 
 
 class Trainer(DefaultTrainer):
