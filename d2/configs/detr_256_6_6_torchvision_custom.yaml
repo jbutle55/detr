@@ -19,7 +19,7 @@ MODEL:
     NUM_CLASSES: 80
 DATASETS:
   TRAIN: ("aerial_train_cars",)
-  TEST: ("aerial_train_valid",)
+  TEST: ("aerial_valid_cars",)
 SOLVER:
   IMS_PER_BATCH: 64
   BASE_LR: 0.0001
